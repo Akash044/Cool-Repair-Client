@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import { createContext, useState } from "react";
 import Home from './Components/Home/Home/Home';
 import Login from './Components/Login/Login';
-import AdminPage from './Components/AdminPage/AdminPage/AdminPage';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
-import Book from './Components/User/Book/Book';
 import BookingsList from './Components/User/BookingList/BookingList';
+import User from './Components/User/User/User';
+import Admin from './Components/AdminPage/Admin/Admin';
 
 export const UserContext = createContext();
 
@@ -26,10 +26,10 @@ function App() {
             <Login />
             </Route>
             <PrivateRoute path="/appointment/:email">
-              <AdminPage />
+              <Admin />
             </PrivateRoute>
             <PrivateRoute path="/service/:id">
-              <Book />
+              <User />
             </PrivateRoute>
             <PrivateRoute path="/appointment/:email">
               <BookingsList />

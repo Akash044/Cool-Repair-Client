@@ -8,6 +8,7 @@ import { useHistory, useLocation } from "react-router-dom";
 import firebaseConfig from "../../firebase.config";
 import firebase from "firebase/app";
 import "firebase/auth";
+import Navbar from "../Home/Navbar/Navbar";
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 }
@@ -27,7 +28,13 @@ const Login = () => {
       .signInWithPopup(provider)
       .then((result) => {
         const user = result.user;
-        setLoggedUser(user);
+        console.log(user);
+        sessionStorage.setItem("email", user.email);
+        setLoggedUser({
+          userName: user.displayName,
+          email: user.email,
+          photo: user.photoURL,
+        });
       
         history.replace(from);
       })
@@ -35,7 +42,7 @@ const Login = () => {
   };
 
   return (
-    <>
+    <><Navbar></Navbar>
       <div className=" display-position">
         <div>
           <h3>Sign in</h3>

@@ -3,6 +3,7 @@ import SingleService from '../SingleService/SingleService';
 
 const AllServices = () => {
     const [services, setServices] = useState([]);
+    
     useEffect(() => {
         fetch('http://localhost:8080/services')
         .then(res => res.json())

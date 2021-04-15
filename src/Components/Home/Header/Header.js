@@ -1,10 +1,11 @@
 import React from "react";
-import './Header.css'
+import "./Header.css";
+import img from "../../../images/03.jpg";
 
 const Header = () => {
   return (
-    <div className="card bg-dark text-white home-header">
-      <img src="..." className="card-img" alt="..." />
+    <div className="card text-dark ms-5 me-5 mt-2 header-card">
+      <img src={img} className="card-img header-img" alt="..." />
       <div className="card-img-overlay">
         <h5 className="card-title">Card title</h5>
         <p className="card-text">
