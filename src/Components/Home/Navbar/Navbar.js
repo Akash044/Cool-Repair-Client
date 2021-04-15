@@ -1,10 +1,10 @@
 import './Navbar.css'
 import React, { useContext } from "react";
-import { BooksContext } from '../../App';
 import { Link, useHistory } from 'react-router-dom';
+import { UserContext } from '../../../App';
 
 const Navbar = () => {
-  const [loggedUser, setLoggedUser] = useContext(BooksContext);
+  const [loggedUser, setLoggedUser] = useContext(UserContext);
   const {email} = loggedUser;
   const history = useHistory()
 

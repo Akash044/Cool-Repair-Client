@@ -1,0 +1,9 @@
+.violet-color{
+    background-color: #6946F4;
+}
+.display-position{
+    display: grid;
+    height: 500px;
+    justify-content:space-evenly;
+    align-content: center;
+}

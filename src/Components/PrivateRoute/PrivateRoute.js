@@ -1,10 +1,11 @@
 import React from 'react';
 import { useContext } from 'react';
 import { Redirect, Route } from 'react-router-dom';
-import { BooksContext } from '../../App';
+import { UserContext } from '../../App';
+
 
 const PrivateRoute = ({ children, ...rest }) => {
-    const [loggedUser, setLoggedUser] = useContext(BooksContext);
+    const [loggedUser, setLoggedUser] = useContext(UserContext);
     return (
         <Route
             {...rest}
