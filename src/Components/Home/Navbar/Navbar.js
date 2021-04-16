@@ -63,10 +63,15 @@ const Navbar = () => {
               { loggedUser.isAdmin? <Link className="nav-link active" to='/admin'>
                <h5>Admin</h5>
               </Link>:
-                 <Link className="nav-link active" to='/dashboard'>
+                 ( email?
+                   <Link className="nav-link active" to='/dashboard'>
                  <h5>DashBoard</h5>
-                </Link>
+                </Link>:
+                  <h6></h6>
+
+                )
               }
+              
             </li>
             <li className="nav-item pe-2">
               <img src={loggedUser.photo} alt="" className="me-2" style={{ width:"50px",borderRadius:"50px"}}/>
