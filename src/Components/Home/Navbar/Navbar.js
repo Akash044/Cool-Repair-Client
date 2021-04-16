@@ -2,11 +2,23 @@ import './Navbar.css'
 import React, { useContext } from "react";
 import { Link, useHistory } from 'react-router-dom';
 import { UserContext } from '../../../App';
+import { useEffect } from 'react';
 
 const Navbar = () => {
   const [loggedUser, setLoggedUser] = useContext(UserContext);
   const {email} = loggedUser;
   const history = useHistory()
+
+  useEffect(() => {
+    fetch(`http://localhost:8080/isAdmin/${email}`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setLoggedUser({
+          ...loggedUser,
+          isAdmin:data});
+      });
+  },[email])
 
   const handleSignOut = () =>{
     setLoggedUser({});
@@ -15,6 +27,7 @@ const Navbar = () => {
   const handleSignIn = () =>{
     history.push('/login')
   }
+  console.log(loggedUser);
   return (
     <nav className="navbar navbar-expand-lg navbar-light nv">
       <div className="container-fluid">
@@ -41,31 +54,23 @@ const Navbar = () => {
               <Link
                 className="nav-link active"
                 aria-current="page"
-                to='/'
+                to='/home'
               >
                 <h5>Home</h5>
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" to='/orders'>
-               <h5>Orders</h5>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link active" to='/admin'>
+              { loggedUser.isAdmin? <Link className="nav-link active" to='/admin'>
                <h5>Admin</h5>
-              </Link>
+              </Link>:
+                 <Link className="nav-link active" to='/dashboard'>
+                 <h5>DashBoard</h5>
+                </Link>
+              }
             </li>
-            <li className="nav-item">
-              <Link
-                className="nav-link active"
-                to='#'
-              >
-                <h5>Checkout</h5>
-              </Link>
-            </li>
-            <li className="nav-item mt-2 pe-2">
-               <h5>{loggedUser.userName}</h5>
+            <li className="nav-item pe-2">
+              <img src={loggedUser.photo} alt="" className="me-2" style={{ width:"50px",borderRadius:"50px"}}/>
+               <i>{loggedUser.userName}</i>
             </li>
             <li className="nav-item">
               <button className="btn violet-color text-white" onClick={email? handleSignOut: handleSignIn}><h6>{email ? 'Log out' : 'Login'}</h6></button>

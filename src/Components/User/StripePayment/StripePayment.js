@@ -7,10 +7,11 @@ import SimpleCardForm from './SimpleCardForm';
 // recreating the `Stripe` object on every render.
 const stripePromise = loadStripe('pk_test_51IgNo4C0BTnScUVgQdLfcLfCOzneHZl9aeYUkRQbxe1gPQIzPKw2aOapp0zgbHAdu1KqORG6nUDUeqiJBGLPxrCh00QQ2o8Gyy');
 
-const StripePayment = () => {
+const StripePayment = (props) => {
+  console.log(props.service)
   return (
     <Elements stripe={stripePromise}>
-      <SimpleCardForm></SimpleCardForm>
+      <SimpleCardForm service={props.service}></SimpleCardForm>
     </Elements>
   );
 };

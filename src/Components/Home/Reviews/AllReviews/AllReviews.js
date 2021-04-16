@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import SingleReview from '../SingleReview/SingleReview';
 
 const AllReviews = () => {
+    const [reviews, setReviews] = useState([])
+    useEffect(()=>{
+            fetch('http://localhost:8080/reviews')
+            .then(res => res.json())
+            .then(data =>{
+                console.log(data);
+                setReviews(data);
+            })
+    },[])
     return (
-        <div>
+        <div className="reviews-section">
+            
+            {
+                reviews.map(review => <SingleReview key={review._id} review={review}></SingleReview>)
+            }
             
         </div>
     );

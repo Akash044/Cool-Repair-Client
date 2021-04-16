@@ -1,9 +1,7 @@
 import "./ManageServices.css";
 import React, { useEffect, useState } from "react";
-import { Link} from "react-router-dom";
-import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus, faTh, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 
 
 const ManageServices = () => {
@@ -67,7 +65,8 @@ const ManageServices = () => {
                   style={{ borderBottom: "1px solid black", padding: "10px" }}
                 >
                   <th> {i} </th>
-                  <th>{service.name}</th> <th>{service.description}</th>
+                  <th>{service.name}</th> 
+                  <th>{service.description}</th>
                   <th>${service.charge}</th>
                   <th>
                     <button

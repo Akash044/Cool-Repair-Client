@@ -1,3 +1,4 @@
+import './AllServices.css'
 import React, { useEffect, useState } from 'react';
 import SingleService from '../SingleService/SingleService';
 
@@ -13,7 +14,7 @@ const AllServices = () => {
         })
     },[])
     return (
-        <div className="row ms-5">
+        <div className="row ms-5 service-section">
             {
                 services.map(service => <SingleService key={service._id} serviceInfo={service}></SingleService>)
 

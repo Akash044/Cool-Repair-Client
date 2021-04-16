@@ -4,11 +4,9 @@ import { UserContext } from "../../App";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/fontawesome-free-brands";
 import { useHistory, useLocation } from "react-router-dom";
-
 import firebaseConfig from "../../firebase.config";
 import firebase from "firebase/app";
 import "firebase/auth";
-import Navbar from "../Home/Navbar/Navbar";
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 }
@@ -40,9 +38,9 @@ const Login = () => {
       })
       .catch(() => {});
   };
-
+  
+  console.log(loggedUser);
   return (
-    <><Navbar></Navbar>
       <div className=" display-position">
         <div>
           <h3>Sign in</h3>
@@ -55,7 +53,6 @@ const Login = () => {
           </button>
         </div>
       </div>
-    </>
   );
 };
 

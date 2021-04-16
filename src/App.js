@@ -7,6 +7,7 @@ import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import BookingsList from './Components/User/BookingList/BookingList';
 import User from './Components/User/User/User';
 import Admin from './Components/AdminPage/Admin/Admin';
+import Navbar from './Components/Home/Navbar/Navbar';
 
 export const UserContext = createContext();
 
@@ -15,6 +16,7 @@ function App() {
   return (
   <UserContext.Provider value={[user, setUser]}>
     <Router>
+      <Navbar></Navbar>
           <Switch>
             <Route exact path="/">
              <Home />
@@ -25,15 +27,18 @@ function App() {
             <Route path="/login">
             <Login />
             </Route>
-            <PrivateRoute path="/appointment/:email">
-              <Admin />
-            </PrivateRoute>
             <PrivateRoute path="/service/:id">
               <User />
             </PrivateRoute>
             <PrivateRoute path="/appointment/:email">
               <BookingsList />
             </PrivateRoute>
+            <Route path="/admin">
+              <Admin />
+            </Route>
+            <Route path="/dashboard">
+              <User />
+            </Route>
           </Switch>
         </Router>
   </UserContext.Provider>

@@ -35,7 +35,6 @@ const AddService = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        const newData = new FormData();
         setNewServiceData({});
         setSpinner(!spinner);
         alert("Successfully added");

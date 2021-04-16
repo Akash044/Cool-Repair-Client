@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { UserContext } from "../../App";
 
 const SideBar = (props) => {
-  const {status} = props.displayOption;
+  const [loggedUser, setLoggedUser] = useContext(UserContext);
+
+  console.log(props)
   return (
-    <div className="container-fluid">
-      { status!="admin"?
+    <div className="">
+      { !loggedUser.isAdmin?
         <div className="row">
         <div className="col-sm-auto bg-light sticky-top">
           <div className="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top">

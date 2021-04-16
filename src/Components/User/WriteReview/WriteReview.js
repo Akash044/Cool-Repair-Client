@@ -12,6 +12,7 @@ const WriteReview = () => {
             review: review
         });
     }
+
    
     const handleReviewBtn = () => {
         fetch('http://localhost:8080/addReview',{
@@ -26,7 +27,7 @@ const WriteReview = () => {
     }
     console.log(review);
     return (
-        <div>
+        <div className="mt-5">
             
             <h3>Write your Review</h3>
             <input onBlur={handleReview} type="text"/> <br/>

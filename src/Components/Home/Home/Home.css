@@ -1,0 +1,14 @@
+.service-header{
+    background-color: salmon;
+    padding:10px ;
+    border-radius: 0 30px 30px 0;
+    width: 35%;
+    text-align:center;
+}
+.review-header{
+    background-color: steelblue;
+    padding:10px ;
+    border-radius: 0 30px 30px 0;
+    width: 35%;
+    text-align:center;
+}

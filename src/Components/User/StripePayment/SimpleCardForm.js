@@ -1,41 +1,63 @@
-import {CardElement, useStripe, useElements} from '@stripe/react-stripe-js';
+import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
+import { useContext, useState } from "react";
+import { UserContext } from "../../../App";
 
-const SimpleCardForm = () => {
+const SimpleCardForm = (props) => {
+  const [loggedUser, setLoggedUser] = useContext(UserContext);
+  const [errorMessage, setErrorMessage] = useState(null);
+  const [orderInfo, setOrderInfo] = useState({});
+  const { name, charge, image, description } = props.service;
   const stripe = useStripe();
   const elements = useElements();
 
   const handleSubmit = async (event) => {
-    // Block native form submission.
     event.preventDefault();
 
     if (!stripe || !elements) {
-      // Stripe.js has not loaded yet. Make sure to disable
-      // form submission until Stripe.js has loaded.
       return;
     }
-
-    // Get a reference to a mounted CardElement. Elements knows how
-    // to find your CardElement because there can only ever be one of
-    // each type of element.
     const cardElement = elements.getElement(CardElement);
 
-    // Use your card Element with other Stripe.js APIs
-    const {error, paymentMethod} = await stripe.createPaymentMethod({
-      type: 'card',
+    const { error, paymentMethod } = await stripe.createPaymentMethod({
+      type: "card",
       card: cardElement,
     });
 
     if (error) {
-      console.log('[error]', error);
+      console.log("[error]", error);
+      setErrorMessage(error.message);
     } else {
-      console.log('[PaymentMethod]', paymentMethod);
+      console.log("[PaymentMethod]", paymentMethod);
+      setErrorMessage(null);
+      const newData = {
+        email: loggedUser.email,
+        serName: name,
+        serImg: image,
+        serDesc: description,
+        serCharge: charge,
+        serStatus: "pending",
+        paymentId: paymentMethod.id,
+      };
+      console.log(newData);
+      setOrderInfo(newData);
+
+      fetch("http://localhost:8080/addAppointment", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(newData),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+        });
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="mt-5" style={{width:"40%"}}>
+    <form onSubmit={handleSubmit} className="mt-5" style={{ width: "40%" }}>
       <CardElement />
-      <button type="submit" className="btn btn-success mt-2"disabled={!stripe}>
+      {errorMessage && <p>{errorMessage}</p>}
+      <button type="submit" className="btn btn-success mt-2" disabled={!stripe}>
         Pay
       </button>
     </form>
