@@ -7,7 +7,7 @@ const Header = () => {
     <div className="card text-dark ms-5 me-5 mt-2 header-card">
       <img src={img} className="card-img header-img" alt="..." />
       <div className="card-img-overlay">
-        <h4 className="card-title">We care your money</h4>
+        <h4 className="card-title">WE CARE YOUR MONEY</h4>
         <p className="card-text">
         </p>
       </div>

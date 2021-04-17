@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import axios from "axios";
+import './AddService.css'
 
 const AddService = () => {
+  document.title = "Add Service"
     const [newServiceData, setNewServiceData] = useState({});
     const [spinner, setSpinner] = useState(false);
 
@@ -41,12 +43,11 @@ const AddService = () => {
       });
   };
     return (
-        <div>
+        <div className="add-service-page">
             <h2>Add new Service</h2>
-            <div className="input-group bg-info shadow rounded p-3">
+            <div className="input-group bg-add-service shadow rounded p-3">
               <div className="m-3">
                 <h4>Service Name</h4>
-               
                 <input
                   type="text"
                   name="name"
@@ -76,6 +77,7 @@ const AddService = () => {
                 <h4>Upload an image</h4>
                 <input
                   type="file"
+                  accept="image/*"
                   onChange={handleImageData}
                 />{!newServiceData.image && spinner && (<div>
                   <span
@@ -89,7 +91,7 @@ const AddService = () => {
             </div>
             <button
             // type="submit"
-              className="btn violet-color text-white ms-3 mt-3"
+              className="btn btn-color text-white ms-3 mt-3"
               onClick={handleAddNewService}
               disabled={!newServiceData.image && true}
             >

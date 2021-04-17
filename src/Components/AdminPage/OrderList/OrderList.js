@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Dropdown } from "react-bootstrap";
+import './OrderList.css'
 
 const OrderList = () => {
+  document.title = "Order List"
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
@@ -13,9 +15,7 @@ const OrderList = () => {
   }, []);
 
   const handleUpdateStatus = (status, id) => {
-    console.log(status, id);
     const newData = { status: status };
-    console.log(newData);
     fetch(`http://localhost:8080/updateStatus/${id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
@@ -30,10 +30,9 @@ const OrderList = () => {
   let i = 1;
   return (
     <div className="mt-5">
-      <h4>this is order list page</h4>
+      <h4>Clients Order list</h4>
       {
         <table
-          className=""
           border="1"
           style={{ width: "95%", textAlign: "center" }}
         >

@@ -9,12 +9,11 @@ const AllServices = () => {
         fetch('http://localhost:8080/services')
         .then(res => res.json())
         .then(data =>{
-            console.log(data);
             setServices(data);
         })
     },[])
     return (
-        <div className="row ms-5 service-section">
+        <div className="ms-5 service-section">
             {
                 services.map(service => <SingleService key={service._id} serviceInfo={service}></SingleService>)
 

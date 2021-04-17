@@ -1,12 +1,14 @@
 import './SingleService.css'
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { UserContext } from '../../../../App';
 
 const SingleService = (props) => {
   const {_id, name, description, charge, image } = props.serviceInfo;
+  const [loggedUser, setLoggedUser] = useContext(UserContext);
  
   return (
-    <div className="card col-md-4" style={{width: "18rem"}}>
+    <div className="card" style={{width: "18rem"}}>
       <img src={image} className="card-img-top" alt="..." />
       <div className="card-body">
         <h5 className="card-title">{name}</h5>
@@ -14,10 +16,10 @@ const SingleService = (props) => {
           {description}
         </p>
         <h4>$ {charge}</h4>
-        <Link to={`/service/${_id}`}>
+        {!loggedUser.isAdmin && <Link to={`/service/${_id}`}>
         <button className="btn btn-primary">
           Take service
-        </button></Link>
+        </button></Link>}
       </div>
     </div>
   );

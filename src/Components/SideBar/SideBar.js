@@ -12,16 +12,6 @@ const SideBar = (props) => {
         <div className="row">
         <div className="col-sm-auto bg-light sticky-top">
           <div className="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top">
-            <Link
-              to="/home"
-              className="d-block p-3 link-dark text-decoration-none"
-              title=""
-              data-bs-toggle="tooltip"
-              data-bs-placement="right"
-              data-bs-original-title="Icon-only"
-            >
-              <i className="bi-bootstrap fs-1">Home</i>
-            </Link>
             <ul className="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center">
               <li className="nav-item">
                 <button
@@ -67,16 +57,6 @@ const SideBar = (props) => {
       <div className="row">
         <div className="col-sm-auto bg-light sticky-top">
           <div className="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top">
-            <Link
-              to="/home"
-              className="d-block p-3 link-dark text-decoration-none"
-              title=""
-              data-bs-toggle="tooltip"
-              data-bs-placement="right"
-              data-bs-original-title="Icon-only"
-            >
-              <i className="bi-bootstrap fs-1">Home</i>
-            </Link>
             <ul className="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center">
               <li className="nav-item">
                 <button

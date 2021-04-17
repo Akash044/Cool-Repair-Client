@@ -38,8 +38,6 @@ const Login = () => {
       })
       .catch(() => {});
   };
-  
-  console.log(loggedUser);
   return (
       <div className=" display-position">
         <div>

@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSyncAlt } from "@fortawesome/free-solid-svg-icons";
 
 const BookingsList = () => {
+    document.title = "Booking list"
     const [loggedUser, setLoggedUser] = useContext(UserContext);
     const [bookings, setBooking] = useState([]);
     const {email} = loggedUser;
@@ -12,16 +13,15 @@ const BookingsList = () => {
         fetch(`http://localhost:8080/allAppointment/${email}`)
         .then(res => res.json())
         .then(data =>{
-            console.log(data);
             setBooking(data);
         })
     },[email])
     let i=1;
     return (
         <div className="mt-5">
-            <h4>this booking list page</h4>
+            <h2>Your Booking list:</h2>
             {
-                <table className=""
+                <table className="mt-3"
                 border="1"
                 style={{ width: "95%", textAlign: "center" }}
               >

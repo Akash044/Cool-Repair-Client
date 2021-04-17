@@ -1,15 +1,18 @@
 import React, { useContext, useState } from 'react';
 import { UserContext } from '../../../App';
+import './WriteReview.css'
 
 const WriteReview = () => {
+    document.title = "Write Review"
     const [review, setReview] = useState({});
     const [loggedUser, setLoggedUser] = useContext(UserContext);
+    
     const handleReview = (e) => {
-        console.log(e.target.value);
         const review = e.target.value;
         setReview({
             ...loggedUser,
-            review: review
+            review: review,
+            time : new Date().toDateString()
         });
     }
 
@@ -22,15 +25,14 @@ const WriteReview = () => {
         })
         .then(res => res.json())
         .then(data =>{
-            console.log(data);
+            data && alert('review added successfully');
         })
-    }
-    console.log(review);
+    };
     return (
-        <div className="mt-5">
+        <div className="mt-5 review-page shadow">
             
             <h3>Write your Review</h3>
-            <input onBlur={handleReview} type="text"/> <br/>
+            <input onBlur={handleReview} type="text" className="mt-3" placeholder="here"/> <br/>
             <button className="btn btn-info mt-3" onClick={handleReviewBtn}>Submit</button>
         </div>
     );

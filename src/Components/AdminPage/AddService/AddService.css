@@ -1,0 +1,13 @@
+.bg-add-service {
+  background-color: aquamarine;
+}
+.btn-color {
+  background-color: salmon;
+}
+.add-service-page {
+
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+    border-radius:10px;
+}

@@ -29,7 +29,7 @@ const Navbar = () => {
   }
   console.log(loggedUser);
   return (
-    <nav className="navbar navbar-expand-lg navbar-light nv">
+    <nav className="navbar navbar-expand-lg bg-gradient navbar-light nav-bg nv">
       <div className="container-fluid">
         <Link className="navbar-brand ms-5" to="/">
           <h3>COOL REPAIR</h3>
@@ -73,8 +73,8 @@ const Navbar = () => {
               }
               
             </li>
-            <li className="nav-item pe-2">
-              <img src={loggedUser.photo} alt="" className="me-2" style={{ width:"50px",borderRadius:"50px"}}/>
+            <li className="nav-item pe-2 ps-3">
+            {loggedUser.photo && <img src={loggedUser.photo} alt="" className="me-2" style={{ width:"50px",borderRadius:"50px"}}/>}
                <i>{loggedUser.userName}</i>
             </li>
             <li className="nav-item">

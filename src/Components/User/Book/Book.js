@@ -1,11 +1,13 @@
+import './Book.css'
 import React from 'react';
 import StripePayment from '../StripePayment/StripePayment';
 
 const Book = (props) => {
+    document.title = "Book"
     const {name, charge} = props.service;
 
     return (
-        <div className="mt-5">
+        <div className="mt-5 book-page  shadow">
             {
                 name ?
                 <> 

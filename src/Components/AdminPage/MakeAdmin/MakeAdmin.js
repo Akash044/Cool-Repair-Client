@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import './MakeAdmin.css'
 
 const MakeAdmin = () => {
+    document.title = "Make Admin"
     const [newAdmin, setNewAdmin] = useState({});
-    
 
     const handleOnBlur = (e) => {
         const newData = { ...newAdmin, [e.target.name]: e.target.value };
@@ -16,14 +17,14 @@ const MakeAdmin = () => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data);
+            data && alert('Admin added successfully');
 
         })
 
     }
     return (
-        <div>
-            <h4>this is make admin page</h4>
+        <div className="mt-5 make-admin-page shadow">
+            <h4>Make an Admin</h4>
             <input onBlur={handleOnBlur} name="email" type="text" placeholder="Enter an email"/> <br/>
             <button class="btn btn-success mt-2" onClick={handleAddAdmin}>Add</button>
             

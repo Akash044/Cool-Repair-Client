@@ -48,15 +48,16 @@ const SimpleCardForm = (props) => {
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
+          data && alert('Order confirmed successfully')
         });
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="mt-5" style={{ width: "40%" }}>
+    <form onSubmit={handleSubmit} className="mt-5" style={{ width:""}}>
+      <h5>Enter card number:</h5>
       <CardElement />
-      {errorMessage && <p>{errorMessage}</p>}
+      {errorMessage && <p style={{color:"red"}}>{errorMessage}</p>}
       <button type="submit" className="btn btn-success mt-2" disabled={!stripe}>
         Pay
       </button>

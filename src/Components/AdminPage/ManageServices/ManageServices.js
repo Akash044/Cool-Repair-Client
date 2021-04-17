@@ -5,7 +5,7 @@ import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 
 
 const ManageServices = () => {
-    document.title = "Admin";
+    document.title = "Manage Services";
   const [servicesData, setServicesData] = useState([]);
   
 
@@ -31,9 +31,9 @@ const ManageServices = () => {
   
 
   let i = 1;
-    return (<>
-        <h2>Manage Books</h2>
-            <table className=""
+    return (<div className="mt-5">
+        <h2>Manage Services</h2>
+            <table
               border="1"
               style={{ width: "95%", textAlign: "center" }}
             >
@@ -79,7 +79,7 @@ const ManageServices = () => {
                 </tr>
               ))}
               </tbody>
-            </table></>
+            </table></div>
     );
 };
 

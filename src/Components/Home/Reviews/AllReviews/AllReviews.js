@@ -1,3 +1,4 @@
+import './AllReviews.css'
 import React, { useEffect, useState } from 'react';
 import SingleReview from '../SingleReview/SingleReview';
 
@@ -7,7 +8,6 @@ const AllReviews = () => {
             fetch('http://localhost:8080/reviews')
             .then(res => res.json())
             .then(data =>{
-                console.log(data);
                 setReviews(data);
             })
     },[])

@@ -12,3 +12,18 @@
     width: 35%;
     text-align:center;
 }
+.ask-question-header{
+    background-color: rgb(167, 64, 145);
+    padding:10px ;
+    border-radius: 0 30px 30px 0;
+    width: 35%;
+    text-align:center;
+
+}
+.blog-header{
+    background-color: rgb(39, 182, 108);
+    padding:10px ;
+    border-radius: 0 30px 30px 0;
+    width: 35%;
+    text-align:center;
+}

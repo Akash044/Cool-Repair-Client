@@ -1,20 +1,18 @@
-import './SingleReview.css'
+import "./SingleReview.css";
 import React from "react";
 
 const SingleReview = (props) => {
-  const { userName, email, photo, review } = props.review;
+  const { userName, photo, review, time } = props.review;
   return (
-    <div class="col">
-            <div class="testimonial">
-              <img src={photo} alt=""/>
-              <div class="name">{userName}</div>
-
-              <p>
-               {review}
-              </p>
-            </div>
-          </div>
-
+    <div>
+      <div  className="testimonial shadow rounded">
+        <img src={photo} alt="" />
+        <div  className="name">{userName}</div>
+        <p>{review}</p>
+        <p>{time}</p>
+      </div>
+      
+    </div>
   );
 };
 
