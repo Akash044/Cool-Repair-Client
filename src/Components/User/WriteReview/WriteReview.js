@@ -18,7 +18,7 @@ const WriteReview = () => {
 
    
     const handleReviewBtn = () => {
-        fetch('http://localhost:8080/addReview',{
+        fetch('https://fierce-waters-48255.herokuapp.com/addReview',{
             method: 'POST',
             headers: { 'Content-Type': 'application/json'},
             body: JSON.stringify(review)

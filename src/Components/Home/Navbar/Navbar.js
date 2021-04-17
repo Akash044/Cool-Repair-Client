@@ -10,7 +10,7 @@ const Navbar = () => {
   const history = useHistory()
 
   useEffect(() => {
-    fetch(`http://localhost:8080/isAdmin/${email}`)
+    fetch(`https://fierce-waters-48255.herokuapp.com/isAdmin/${email}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

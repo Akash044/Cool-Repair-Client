@@ -5,7 +5,7 @@ import SingleReview from '../SingleReview/SingleReview';
 const AllReviews = () => {
     const [reviews, setReviews] = useState([])
     useEffect(()=>{
-            fetch('http://localhost:8080/reviews')
+            fetch('https://fierce-waters-48255.herokuapp.com/reviews')
             .then(res => res.json())
             .then(data =>{
                 setReviews(data);

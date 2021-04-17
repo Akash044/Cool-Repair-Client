@@ -7,7 +7,7 @@ const OrderList = () => {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/allAppointment")
+    fetch("https://fierce-waters-48255.herokuapp.com/allAppointment")
       .then((res) => res.json())
       .then((data) => {
         setOrders(data);
@@ -16,7 +16,7 @@ const OrderList = () => {
 
   const handleUpdateStatus = (status, id) => {
     const newData = { status: status };
-    fetch(`http://localhost:8080/updateStatus/${id}`, {
+    fetch(`https://fierce-waters-48255.herokuapp.com/updateStatus/${id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newData),

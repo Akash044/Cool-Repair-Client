@@ -10,7 +10,7 @@ const BookingsList = () => {
     const {email} = loggedUser;
 
     useEffect(() => {
-        fetch(`http://localhost:8080/allAppointment/${email}`)
+        fetch(`https://fierce-waters-48255.herokuapp.com/allAppointment/${email}`)
         .then(res => res.json())
         .then(data =>{
             setBooking(data);

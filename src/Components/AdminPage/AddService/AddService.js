@@ -30,7 +30,7 @@ const AddService = () => {
 
   const handleAddNewService = (e) => {
     e.preventDefault();
-    fetch("http://localhost:8080/addService", {
+    fetch("https://fierce-waters-48255.herokuapp.com/addService", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newServiceData),

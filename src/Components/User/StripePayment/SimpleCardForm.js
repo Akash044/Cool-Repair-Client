@@ -41,7 +41,7 @@ const SimpleCardForm = (props) => {
       console.log(newData);
       setOrderInfo(newData);
 
-      fetch("http://localhost:8080/addAppointment", {
+      fetch("https://fierce-waters-48255.herokuapp.com/addAppointment", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newData),

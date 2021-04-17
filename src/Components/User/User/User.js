@@ -21,7 +21,7 @@ const User = () => {
   const userEmail = {email: sessionStorage.getItem("email")}
 
   useEffect(() => {
-    fetch(`http://localhost:8080/service/${id}`)
+    fetch(`https://fierce-waters-48255.herokuapp.com/service/${id}`)
       .then((res) => res.json())
       .then((data) => {
           setService(data);

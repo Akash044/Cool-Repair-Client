@@ -10,7 +10,7 @@ const MakeAdmin = () => {
         setNewAdmin(newData);
     }
     const handleAddAdmin = () => {
-        fetch('http://localhost:8080/addAdmin',{
+        fetch('https://fierce-waters-48255.herokuapp.com/addAdmin',{
             method: 'POST',
             headers: { 'Content-Type': 'application/json'},
             body: JSON.stringify(newAdmin)

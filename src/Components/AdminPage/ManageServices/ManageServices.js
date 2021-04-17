@@ -10,7 +10,7 @@ const ManageServices = () => {
   
 
   useEffect(() => {
-    fetch("http://localhost:8080/services")
+    fetch("https://fierce-waters-48255.herokuapp.com/services")
       .then((res) => res.json())
       .then((data) => {
         setServicesData(data);
@@ -19,7 +19,7 @@ const ManageServices = () => {
 
   const handleDeleteService = (e, id) => {
     console.log(e.target.parentNode.parentNode, id);
-    fetch(`http://localhost:8080/deleteService/${id}`, {
+    fetch(`https://fierce-waters-48255.herokuapp.com/deleteService/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
