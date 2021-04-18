@@ -4,10 +4,10 @@ import { createContext, useState } from "react";
 import Home from './Components/HomePage/Home/Home';
 import Login from './Components/LoginPage/Login';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
-import BookingsList from './Components/User/BookingList/BookingList';
-import User from './Components/User/User/User';
+import User from './Components/UserPage/User/User';
 import Admin from './Components/AdminPage/Admin/Admin';
 import Navbar from './Components/HomePage/Navbar/Navbar';
+import BookingsList from './Components/UserPage/BookingList/BookingList';
 
 export const UserContext = createContext();
 

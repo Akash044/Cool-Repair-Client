@@ -1,7 +1,7 @@
 import "./User.css";
 import React, { useContext, useEffect, useState } from "react";
 import Book from "../Book/Book";
-import BookingList from "../../User/BookingList/BookingList"
+import BookingList from "../../UserPage/BookingList/BookingList"
 import SideBar from "../../SideBar/SideBar";
 import { useParams } from "react-router";
 import WriteReview from "../WriteReview/WriteReview";

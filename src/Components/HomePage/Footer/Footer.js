@@ -99,12 +99,6 @@ const Footer = () => {
               <div  className="col-md-6 ">
                 <h6> Newsletter</h6>
                 <div  className="social">
-                  <a href="#">
-                    <i  className="fa fa-facebook" aria-hidden="true"></i>
-                  </a>
-                  <a href="#">
-                    <i  className="fa fa-instagram" aria-hidden="true"></i>
-                  </a>
                 </div>
                 <form  className="form-footer my-3">
                   <input
@@ -114,7 +108,6 @@ const Footer = () => {
                   />
                   <input type="button" value="Go" />
                 </form>
-                <p>That's technology limitation of LCD monitors</p>
               </div>
             </div>
           </div>
