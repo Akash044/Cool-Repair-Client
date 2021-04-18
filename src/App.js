@@ -1,14 +1,13 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import { createContext, useState } from "react";
-import Home from './Components/Home/Home/Home';
-import Login from './Components/Login/Login';
+import Home from './Components/HomePage/Home/Home';
+import Login from './Components/LoginPage/Login';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import BookingsList from './Components/User/BookingList/BookingList';
 import User from './Components/User/User/User';
 import Admin from './Components/AdminPage/Admin/Admin';
-import Navbar from './Components/Home/Navbar/Navbar';
-import SideBarB from './Components/SideBarB/SideBarB';
+import Navbar from './Components/HomePage/Navbar/Navbar';
 
 export const UserContext = createContext();
 
