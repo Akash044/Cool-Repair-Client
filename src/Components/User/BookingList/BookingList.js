@@ -1,3 +1,4 @@
+import './BookingList.css'
 import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../../App';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -21,14 +22,11 @@ const BookingsList = () => {
         <div className="mt-5">
             <h2>Your Booking list:</h2>
             {
-                <table className="mt-3"
+                <table className="mt-3 booking-table"
                 border="1"
-                style={{ width: "95%", textAlign: "center" }}
               >
                 <thead>
-                  <tr
-                    style={{ borderBottom: "1px solid black", padding: "10px" }}
-                  >
+                  <tr>
                     <th>
                       <h4>SI</h4>
                     </th>
@@ -50,18 +48,18 @@ const BookingsList = () => {
                 {bookings.map((booking) => (
                   <tr
                     key={booking._id}
-                    style={{ borderBottom: "1px solid black", padding: "10px" }}
                   >
-                    <th> {i++} </th>
-                    <th>{booking.serName}</th> <th>{booking.serDesc}</th>
-                    <th>${booking.serCharge}</th>
-                    <th>
+                    <td data-label="SI"> {i++} </td>
+                    <td data-label="Service Name">{booking.serName}</td> 
+                    <td data-label="Description">{booking.serDesc}</td>
+                    <td data-label="Charge">${booking.serCharge}</td>
+                    <td data-label="Status">
                       <button
                         className="btn btn-info"
                       >
                         <FontAwesomeIcon icon={faSyncAlt} /> {booking.serStatus}
                       </button>
-                    </th>
+                    </td>
                   </tr>
                 ))}
                 </tbody>
