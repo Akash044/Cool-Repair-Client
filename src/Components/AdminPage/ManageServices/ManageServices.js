@@ -33,14 +33,10 @@ const ManageServices = () => {
   let i = 1;
     return (<div className="mt-5">
         <h2>Manage Services</h2>
-            <table
-              border="1"
-              style={{ width: "95%", textAlign: "center" }}
+            <table className="manage-table" border="1"
             >
               <thead>
-                <tr
-                  style={{ borderBottom: "1px solid black", padding: "10px" }}
-                >
+                <tr>
                   <th>
                     <h4>SI</h4>
                   </th>
@@ -61,21 +57,20 @@ const ManageServices = () => {
               <tbody>
               {servicesData.map((service) => (
                 <tr
-                  key={i++}
-                  style={{ borderBottom: "1px solid black", padding: "10px" }}
+                  key={service._id}
                 >
-                  <th> {i} </th>
-                  <th>{service.name}</th> 
-                  <th>{service.description}</th>
-                  <th>${service.charge}</th>
-                  <th>
+                  <td data-label="SI"> {i++} </td>
+                  <td data-label="Service Name">{service.name}</td> 
+                  <td data-label="Description">{service.description}</td>
+                  <td data-label="Charge">${service.charge}</td>
+                  <td data-label="Action">
                     <button
                       className="btn btn-danger"
                       onClick={(e) => handleDeleteService(e, service._id)}
                     >
                       <FontAwesomeIcon icon={faTrashAlt} /> Delete
                     </button>
-                  </th>
+                  </td>
                 </tr>
               ))}
               </tbody>

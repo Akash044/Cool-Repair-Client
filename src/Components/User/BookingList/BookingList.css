@@ -1,5 +1,8 @@
+.booking-list-page{
+    margin: auto;
+}
 .booking-table{
-    width:100%;
+    width:90%;
     border-collapse: collapse;
 }
 .booking-table th, .booking-table tr{
@@ -9,7 +12,7 @@
     font-size: 16px;
 }
 .booking-table th{
-    background-color: orangered;
+    background-color: black;
     color: #ffffff;
 }
 .booking-table tbody tr:nth-child(even){
@@ -29,8 +32,9 @@
     }
     .booking-table td{
         text-align: right;
-        padding-left: 50%;
+        padding:10px 10px 10px 50%;
         position: relative;
+        border: 3px solid black;
     }
     .booking-table td::before{
         content:attr(data-label);

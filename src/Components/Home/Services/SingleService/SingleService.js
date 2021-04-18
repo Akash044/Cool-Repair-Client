@@ -8,18 +8,24 @@ const SingleService = (props) => {
   const [loggedUser, setLoggedUser] = useContext(UserContext);
  
   return (
-    <div className="card" style={{width: "18rem"}}>
+    <div className="card flip-card" style={{width: "18rem"}}>
+      <div className="flip-card-inner">
+      
+      <div className="card-body flip-card-front">
       <img src={image} className="card-img-top" alt="..." />
-      <div className="card-body">
         <h5 className="card-title">{name}</h5>
         <p className="card-text">
           {description}
         </p>
-        <h4>$ {charge}</h4>
-        {!loggedUser.isAdmin && <Link to={`/service/${_id}`}>
+        
+      </div>
+      <div className="flip-card-back">
+      <h4>Service charge: ${charge}</h4>
+      {!loggedUser.isAdmin && <Link to={`/service/${_id}`}>
         <button className="btn btn-primary">
           Take service
         </button></Link>}
+      </div>
       </div>
     </div>
   );

@@ -32,12 +32,9 @@ const OrderList = () => {
     <div className="mt-5">
       <h4>Clients Order list</h4>
       {
-        <table
-          border="1"
-          style={{ width: "95%", textAlign: "center" }}
-        >
+        <table className="order-table" border="1">
           <thead>
-            <tr style={{ borderBottom: "1px solid black", padding: "10px" }}>
+            <tr >
               <th>
                 <h4>SI</h4>
               </th>
@@ -62,14 +59,13 @@ const OrderList = () => {
             {orders.map((order) => (
               <tr
                 key={order._id}
-                style={{ borderBottom: "1px solid black", padding: "10px" }}
               >
-                <th> {i++} </th>
-                <th>{order.serName}</th> 
-                <th>{order.serDesc}</th>
-                <th>${order.serCharge}</th>
-                <th>{order.email}</th>
-                <th>
+                <td data-label="SI"> {i++} </td>
+                <td data-label="Service Name">{order.serName}</td> 
+                <td data-label="Description">{order.serDesc}</td>
+                <td data-label="Charge">${order.serCharge}</td>
+                <td data-label="User Email">{order.email}</td>
+                <td data-label="Status">
                   <Dropdown>
                     <Dropdown.Toggle variant="success" id="dropdown-basic">
                       {order.serStatus}
@@ -87,7 +83,7 @@ const OrderList = () => {
                       </Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>
-                </th>
+                </td>
               </tr>
             ))}
           </tbody>

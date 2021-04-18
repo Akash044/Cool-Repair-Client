@@ -32,7 +32,7 @@ const WriteReview = () => {
         <div className="mt-5 review-page shadow">
             
             <h3>Write your Review</h3>
-            <input onBlur={handleReview} type="text" className="mt-3" placeholder="here"/> <br/>
+            <textarea onBlur={handleReview} type="text" className="mt-3 form-control" rows="3" placeholder="here"/> <br/>
             <button className="btn btn-info mt-3" onClick={handleReviewBtn}>Submit</button>
         </div>
     );

@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import { Link, useHistory } from 'react-router-dom';
 import { UserContext } from '../../../App';
 import { useEffect } from 'react';
+import logo from '../../../images/logo.jpg'
 
 const Navbar = () => {
   const [loggedUser, setLoggedUser] = useContext(UserContext);
@@ -31,7 +32,8 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-gradient navbar-light nav-bg nv">
       <div className="container-fluid">
-        <Link className="navbar-brand ms-5" to="/">
+        <img src={logo} style={{width:"4rem", borderRadius:"30px"}} alt=""/>
+        <Link className="navbar-brand ms-2" to="/">
           <h3>COOL REPAIR</h3>
         </Link>
         <button

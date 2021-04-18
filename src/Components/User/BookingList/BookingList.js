@@ -7,24 +7,22 @@ import { faSyncAlt } from "@fortawesome/free-solid-svg-icons";
 const BookingsList = () => {
     document.title = "Booking list"
     const [loggedUser, setLoggedUser] = useContext(UserContext);
-    const [bookings, setBooking] = useState([]);
+    const [bookings, setBookings] = useState([]);
     const {email} = loggedUser;
 
     useEffect(() => {
         fetch(`https://fierce-waters-48255.herokuapp.com/allAppointment/${email}`)
         .then(res => res.json())
         .then(data =>{
-            setBooking(data);
+            setBookings(data);
         })
     },[email])
     let i=1;
     return (
-        <div className="mt-5">
+        <div className="mt-5 booking-list-page">
             <h2>Your Booking list:</h2>
             {
-                <table className="mt-3 booking-table"
-                border="1"
-              >
+                <table className="mt-3 booking-table" border="1">
                 <thead>
                   <tr>
                     <th>

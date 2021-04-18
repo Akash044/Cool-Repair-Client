@@ -1,0 +1,46 @@
+.manage-table{
+    width:90%;
+    border-collapse: collapse;
+}
+.manage-table th, .manage-table tr{
+    padding: 12px 15px;
+    border-top: 1px solid black;
+    text-align: center;
+    font-size: 16px;
+}
+.manage-table th{
+    background-color: black;
+    color: #ffffff;
+}
+.manage-table tbody tr:nth-child(even){
+    background-color:lightgray;
+}
+
+@media(max-width:500px){
+    .manage-table thead{
+        display:none;
+    }
+    .manage-table, .manage-table tbody,.manage-table tr,.manage-table td{
+        display: block;
+        width: 100%;
+    }
+    .manage-table tr{
+        margin-bottom: 15px;
+    }
+    .manage-table td{
+        text-align: right;
+        padding:10px 10px 10px 50%;
+        position: relative;
+        border: 3px solid black;
+    }
+    .manage-table td::before{
+        content:attr(data-label);
+        position:absolute;
+        left:0;
+        width: 50%;
+        padding-left: 15px;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}

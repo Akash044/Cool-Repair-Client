@@ -8,6 +8,7 @@ import BookingsList from './Components/User/BookingList/BookingList';
 import User from './Components/User/User/User';
 import Admin from './Components/AdminPage/Admin/Admin';
 import Navbar from './Components/Home/Navbar/Navbar';
+import SideBarB from './Components/SideBarB/SideBarB';
 
 export const UserContext = createContext();
 
@@ -33,9 +34,9 @@ function App() {
             <PrivateRoute path="/appointment/:email">
               <BookingsList />
             </PrivateRoute>
-            <Route path="/admin">
+            <PrivateRoute path="/admin">
               <Admin />
-            </Route>
+            </PrivateRoute>
             <PrivateRoute path="/dashboard">
               <User />
             </PrivateRoute>

@@ -1,0 +1,46 @@
+.order-table{
+    width:90%;
+    border-collapse: collapse;
+}
+.order-table th, .order-table tr{
+    padding: 12px 15px;
+    border-top: 1px solid black;
+    text-align: center;
+    font-size: 16px;
+}
+.order-table th{
+    background-color: black;
+    color: #ffffff;
+}
+.order-table tbody tr:nth-child(even){
+    background-color:lightgray;
+}
+
+@media(max-width:500px){
+    .order-table thead{
+        display:none;
+    }
+    .order-table, .order-table tbody,.order-table tr,.order-table td{
+        display: block;
+        width: 100%;
+    }
+    .order-table tr{
+        margin-bottom: 15px;
+    }
+    .order-table td{
+        text-align: right;
+        padding:10px 10px 10px 50%;
+        position: relative;
+        border: 3px solid black;
+    }
+    .order-table td::before{
+        content:attr(data-label);
+        position:absolute;
+        left:0;
+        width: 50%;
+        padding-left: 15px;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
