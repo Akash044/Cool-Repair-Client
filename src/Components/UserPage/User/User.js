@@ -1,7 +1,7 @@
 import "./User.css";
 import React, { useContext, useEffect, useState } from "react";
 import Book from "../Book/Book";
-import BookingList from "../../UserPage/BookingList/BookingList"
+import BookingList from "../../UserPage/BookingList/BookingList";
 import SideBar from "../../SideBar/SideBar";
 import { useParams } from "react-router";
 import WriteReview from "../WriteReview/WriteReview";
@@ -11,62 +11,52 @@ import AddService from "../../AdminPage/AddService/AddService";
 import MakeAdmin from "../../AdminPage/MakeAdmin/MakeAdmin";
 import ManageServices from "../../AdminPage/ManageServices/ManageServices";
 
-
 const User = () => {
   document.title = "Dashboard";
   const { id } = useParams();
   const [service, setService] = useState({});
   const [loggedUser, setLoggedUser] = useContext(UserContext);
   const [displayOption, setDisplayOption] = useState(1);
-  const userEmail = {email: sessionStorage.getItem("email")}
+  const userEmail = { email: sessionStorage.getItem("email") };
 
   useEffect(() => {
-    fetch(`https://fierce-waters-48255.herokuapp.com/service/${id}`)
+    fetch(`https://cool-repair.onrender.com/service/${id}`)
       .then((res) => res.json())
       .then((data) => {
-          setService(data);
+        setService(data);
       });
   }, [id]);
-  const handleDisplay = (value) =>{
-      console.log(value);
-      setDisplayOption(value);
-
-  }
+  const handleDisplay = (value) => {
+    console.log(value);
+    setDisplayOption(value);
+  };
   return (
     <div className="row user-page">
       <div className="col-md-2">
         <SideBar handleDisplay={handleDisplay}></SideBar>
       </div>
       <div className="col-md-10">
-       
-        {!loggedUser.isAdmin ? (() => {
-          if (displayOption === 1) {
-            return (
-              <Book service={service}></Book>
-            )
-          } else if (displayOption === 2) {
-            return (
-              <BookingList></BookingList>
-            )
-          } else {
-            return (
-              <WriteReview></WriteReview>
-            )
-          }
-        })():
-        (() => {
-          if (displayOption === 1) {
-            return <OrderList></OrderList>;
-          } else if (displayOption === 2) {
-            return <AddService></AddService>;
-          } else if (displayOption === 3) {
-            return <MakeAdmin></MakeAdmin>;
-          } else {
-            return <ManageServices></ManageServices>;
-          }
-        })()
-      }
-       
+        {!loggedUser.isAdmin
+          ? (() => {
+              if (displayOption === 1) {
+                return <Book service={service}></Book>;
+              } else if (displayOption === 2) {
+                return <BookingList></BookingList>;
+              } else {
+                return <WriteReview></WriteReview>;
+              }
+            })()
+          : (() => {
+              if (displayOption === 1) {
+                return <OrderList></OrderList>;
+              } else if (displayOption === 2) {
+                return <AddService></AddService>;
+              } else if (displayOption === 3) {
+                return <MakeAdmin></MakeAdmin>;
+              } else {
+                return <ManageServices></ManageServices>;
+              }
+            })()}
       </div>
     </div>
   );

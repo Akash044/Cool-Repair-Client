@@ -19,7 +19,9 @@ const Home = () => {
           <h3>The Services we are provided</h3>
         </div>
         <div className="container">
-          <AllServices></AllServices>
+          <AllServices name='khaled'>
+
+          </AllServices>
         </div>
       </div>
       <div className="mt-5">

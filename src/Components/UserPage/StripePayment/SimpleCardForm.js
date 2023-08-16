@@ -41,23 +41,23 @@ const SimpleCardForm = (props) => {
       console.log(newData);
       setOrderInfo(newData);
 
-      fetch("https://fierce-waters-48255.herokuapp.com/addAppointment", {
+      fetch("https://cool-repair.onrender.com/addAppointment", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newData),
       })
         .then((res) => res.json())
         .then((data) => {
-          data && alert('Order confirmed successfully')
+          data && alert("Order confirmed successfully");
         });
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="mt-5" style={{ width:""}}>
+    <form onSubmit={handleSubmit} className="mt-5" style={{ width: "" }}>
       <h5>Enter card number:</h5>
       <CardElement />
-      {errorMessage && <p style={{color:"red"}}>{errorMessage}</p>}
+      {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
       <button type="submit" className="btn btn-success mt-2" disabled={!stripe}>
         Pay
       </button>

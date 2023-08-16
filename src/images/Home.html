@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)http://localhost:19006/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style data-merge-styles="true"></style><style id="react-native-stylesheet"></style>
+    
+    <meta httpequiv="X-UA-Compatible" content="IE=edge">
+    <!-- 
+      This viewport works for phones with notches.
+      It's optimized for gestures by disabling global zoom.
+     -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1.00001, viewport-fit=cover">
+    <title>Home</title>
+    <style>
+      /**
+       * Extend the react-native-web reset:
+       * https://github.com/necolas/react-native-web/blob/master/packages/react-native-web/src/exports/StyleSheet/initialRules.js
+       */
+      html,
+      body,
+      #root {
+        width: 100%;
+        /* To smooth any scrolling behavior */
+        -webkit-overflow-scrolling: touch;
+        margin: 0px;
+        padding: 0px;
+        /* Allows content to fill the viewport and go beyond the bottom */
+        min-height: 100%;
+      }
+      #root {
+        flex-shrink: 0;
+        flex-basis: auto;
+        flex-grow: 1;
+        display: flex;
+        flex: 1;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        /* Prevent text size change on orientation change https://gist.github.com/tfausak/2222823#file-ios-8-web-app-html-L138 */
+        -webkit-text-size-adjust: 100%;
+        height: calc(100% + env(safe-area-inset-top));
+      }
+
+      body {
+        display: flex;
+        /* Allows you to scroll below the viewport; default value is visible */
+        overflow-y: auto;
+        overscroll-behavior-y: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -ms-overflow-style: scrollbar;
+      }
+      /* Enable for apps that support dark-theme */
+      /*@media (prefers-color-scheme: dark) {
+        body {
+          background-color: black;
+        }
+      }*/
+    </style>
+  <link rel="manifest" href="http://localhost:19006/manifest.json"><link rel="icon" type="image/png" sizes="16x16" href="http://localhost:19006/favicon-16.png"><link rel="icon" type="image/png" sizes="32x32" href="http://localhost:19006/favicon-32.png"><link rel="shortcut icon" href="http://localhost:19006/favicon.ico"><style type="text/css">
+  @media print {
+    .ms-editor-squiggler {
+        display:none !important;
+    }
+  }
+  .ms-editor-squiggler {
+    all: initial;
+    display: block !important;
+    height: 0px !important;
+  }</style></head>
+
+  <body>
+    <!-- 
+      A generic no script element with a reload button and a message.
+      Feel free to customize this however you'd like.
+    -->
+    <noscript>
+      <form
+        action=""
+        style="
+          background-color: #fff;
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 9999;
+        "
+      >
+        <div
+          style="
+            font-size: 18px;
+            font-family: Helvetica, sans-serif;
+            line-height: 24px;
+            margin: 10%;
+            width: 80%;
+          "
+        >
+          <p>Oh no! It looks like JavaScript is not enabled in your browser.</p>
+          <p style="margin: 20px 0;">
+            <button
+              type="submit"
+              style="
+                background-color: #4630eb;
+                border-radius: 100px;
+                border: none;
+                box-shadow: none;
+                color: #fff;
+                cursor: pointer;
+                font-weight: bold;
+                line-height: 20px;
+                padding: 6px 16px;
+              "
+            >
+              Reload
+            </button>
+          </p>
+        </div>
+      </form>
+    </noscript>
+    <!-- The root element for your Expo app. -->
+    <div id="root"><div class="css-view-1dbjc4n r-flex-13awgt0 r-pointerEvents-12vffkv"><div class="css-view-1dbjc4n r-flex-13awgt0 r-pointerEvents-12vffkv"><div class="css-view-1dbjc4n r-flex-13awgt0"><div class="css-view-1dbjc4n r-flex-13awgt0"><div class="css-view-1dbjc4n r-flex-13awgt0"><div class="css-view-1dbjc4n r-bottom-1p0dtai r-left-1d2f490 r-pointerEvents-12vffkv r-position-u8s1d r-right-zchlnj r-top-ipm5af" style="display: flex;"><div class="css-view-1dbjc4n" style="opacity: 1;"></div><div class="css-view-1dbjc4n r-bottom-1p0dtai r-left-1d2f490 r-pointerEvents-12vffkv r-position-u8s1d r-right-zchlnj r-top-ipm5af"><div class="css-view-1dbjc4n r-bottom-1p0dtai r-left-1d2f490 r-pointerEvents-12vffkv r-position-u8s1d r-right-zchlnj r-top-ipm5af"></div><div class="css-view-1dbjc4n r-flex-13awgt0 r-pointerEvents-12vffkv"><div class="css-view-1dbjc4n r-flex-13awgt0"><div class="css-view-1dbjc4n r-minHeight-2llsf" style="background-color: rgb(242, 242, 242);"><div class="css-view-1dbjc4n r-flex-13awgt0 r-flexDirection-1d5kdc7"><div class="css-view-1dbjc4n r-flex-13awgt0"><div class="css-view-1dbjc4n r-alignItems-1awozwy r-backgroundColor-14lw9ot r-flex-13awgt0 r-flexWrap-1w6e6rj r-justifyContent-1777fci"><div dir="auto" class="css-text-901oao r-paddingBottom-1mi0q7o">Welcome to LT. Selim Hall</div><div dir="auto" class="css-text-901oao r-paddingBottom-1mi0q7o">To see your dashboard please login...</div><div role="button" data-focusable="true" tabindex="0" class="css-cursor-18t94o4 css-view-1dbjc4n r-backgroundColor-14sbq61 r-borderRadius-1jkafct r-cursor-1loqt21 r-touchAction-1otgn73 r-transitionProperty-1i6wzkk r-userSelect-lrvibr" style="transition-duration: 0.25s;"><div dir="auto" class="css-text-901oao r-color-jwli3a r-fontWeight-majxgm r-padding-edyy15 r-textAlign-q4m81j r-textTransform-tsynxw">Go to Login page</div></div></div></div><div class="css-view-1dbjc4n r-pointerEvents-12vffkv"><div class="css-view-1dbjc4n r-pointerEvents-12vffkv"><div class="css-view-1dbjc4n r-bottom-1p0dtai r-left-1d2f490 r-pointerEvents-12vffkv r-position-u8s1d r-right-zchlnj r-top-ipm5af r-zIndex-417010" style=""><div class="css-view-1dbjc4n r-backgroundColor-14lw9ot r-flex-13awgt0" style="border-bottom-color: rgb(216, 216, 216); border-bottom-width: 1px; box-shadow: rgb(216, 216, 216) 0px 0px 0px;"></div></div><div class="css-view-1dbjc4n r-pointerEvents-12vffkv" style="height: 64px;"><div class="css-view-1dbjc4n r-pointerEvents-633pao" style="height: 0px;"></div><div class="css-view-1dbjc4n r-alignItems-1awozwy r-flex-13awgt0 r-flexDirection-18u37iz r-justifyContent-1777fci r-pointerEvents-12vffkv"><div class="css-view-1dbjc4n r-pointerEvents-12vffkv r-position-u8s1d" style="left: 16px; right: 16px;"><h1 aria-level="1" dir="auto" role="heading" class="css-reset-4rbku5 css-text-901oao css-textOneLine-bfa6kz r-fontWeight-majxgm" style="color: rgb(28, 28, 30); font-size: 18px;">Home</h1></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+  <script src="./Home_files/bundle.js.download"></script>
+
+<div style="position: fixed; left: 0px; top: 0px; width: 0px; height: 0px; z-index: -1; overflow: hidden; visibility: hidden; transition-duration: 0.05s; transition-property: padding; transition-delay: 0s; padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right);"></div></body><editor-card style="position:absolute;top:0px;left:0px;z-index:auto;display: block !important"><div dir="ltr" style="all: initial;"><div style="color: initial; font: initial; font-feature-settings: initial; font-kerning: initial; font-optical-sizing: initial; font-variation-settings: initial; forced-color-adjust: initial; text-orientation: initial; text-rendering: initial; -webkit-font-smoothing: initial; -webkit-locale: initial; -webkit-text-orientation: initial; -webkit-writing-mode: initial; writing-mode: initial; zoom: initial; place-content: initial; place-items: initial; place-self: initial; alignment-baseline: initial; animation: initial; appearance: initial; aspect-ratio: initial; backdrop-filter: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; baseline-shift: initial; block-size: initial; border-block: initial; border: initial; border-radius: initial; border-collapse: initial; border-end-end-radius: initial; border-end-start-radius: initial; border-inline: initial; border-start-end-radius: initial; border-start-start-radius: initial; inset: initial; box-shadow: initial; box-sizing: initial; break-after: initial; break-before: initial; break-inside: initial; buffered-rendering: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color-interpolation: initial; color-interpolation-filters: initial; color-rendering: initial; color-scheme: initial; columns: initial; column-fill: initial; gap: initial; column-rule: initial; column-span: initial; contain: initial; contain-intrinsic-size: initial; content: initial; content-visibility: initial; counter-increment: initial; counter-reset: initial; counter-set: initial; cursor: initial; cx: initial; cy: initial; d: initial; display: initial; dominant-baseline: initial; empty-cells: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; float: initial; flood-color: initial; flood-opacity: initial; grid: initial; grid-area: initial; height: initial; hyphens: initial; image-orientation: initial; image-rendering: initial; inline-size: initial; inset-block: initial; inset-inline: initial; isolation: initial; letter-spacing: initial; lighting-color: initial; line-break: initial; list-style: initial; margin-block: initial; margin: initial; margin-inline: initial; marker: initial; mask: initial; mask-type: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; offset: initial; opacity: initial; order: initial; origin-trial-test-property: initial; orphans: initial; outline: initial; outline-offset: initial; overflow-anchor: initial; overflow-wrap: initial; overflow: initial; overscroll-behavior-block: initial; overscroll-behavior-inline: initial; overscroll-behavior: initial; padding-block: initial; padding: initial; padding-inline: initial; page: initial; page-orientation: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: initial; position: absolute; quotes: initial; r: initial; resize: initial; ruby-position: initial; rx: initial; ry: initial; scroll-behavior: initial; scroll-margin-block: initial; scroll-margin: initial; scroll-margin-inline: initial; scroll-padding-block: initial; scroll-padding: initial; scroll-padding-inline: initial; scroll-snap-align: initial; scroll-snap-stop: initial; scroll-snap-type: initial; shape-image-threshold: initial; shape-margin: initial; shape-outside: initial; shape-rendering: initial; size: initial; speak: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-combine-upright: initial; text-decoration: initial; text-decoration-skip-ink: initial; text-indent: initial; text-overflow: initial; text-shadow: initial; text-size-adjust: initial; text-transform: initial; text-underline-offset: initial; text-underline-position: initial; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; transition: initial; user-select: initial; vector-effect: initial; vertical-align: initial; visibility: initial; -webkit-app-region: initial; border-spacing: initial; -webkit-border-image: initial; -webkit-box-align: initial; -webkit-box-decoration-break: initial; -webkit-box-direction: initial; -webkit-box-flex: initial; -webkit-box-ordinal-group: initial; -webkit-box-orient: initial; -webkit-box-pack: initial; -webkit-box-reflect: initial; -webkit-highlight: initial; -webkit-hyphenate-character: initial; -webkit-line-break: initial; -webkit-line-clamp: initial; -webkit-mask-box-image: initial; -webkit-mask: initial; -webkit-mask-composite: initial; -webkit-perspective-origin-x: initial; -webkit-perspective-origin-y: initial; -webkit-print-color-adjust: initial; -webkit-rtl-ordering: initial; -webkit-ruby-position: initial; -webkit-tap-highlight-color: initial; -webkit-text-combine: initial; -webkit-text-decorations-in-effect: initial; -webkit-text-emphasis: initial; -webkit-text-emphasis-position: initial; -webkit-text-fill-color: initial; -webkit-text-security: initial; -webkit-text-stroke: initial; -webkit-transform-origin-x: initial; -webkit-transform-origin-y: initial; -webkit-transform-origin-z: initial; -webkit-user-drag: initial; -webkit-user-modify: initial; white-space: initial; widows: initial; width: initial; will-change: initial; word-break: initial; word-spacing: initial; x: initial; y: initial; z-index: 2147483647;"><link rel="stylesheet" href="chrome-extension://gpaiobkfhnonedkhhfjpmhdalgeoebfa/fonts/fabric-icons.css"><div style="all: initial;"></div></div></div></editor-card></html>
