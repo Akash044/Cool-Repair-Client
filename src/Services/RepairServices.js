@@ -1,17 +1,17 @@
 import requestServices from "./httpServices";
 
 class RepairServices {
-  getServices(url) {
-    return requestServices.get(url);
+  getServices() {
+    return requestServices.get("/services");
   }
-  postServices(url, body) {
-    return requestServices.post(url, body);
+  postServices(body) {
+    return requestServices.post("/services", body);
   }
-  updateServices(url, body) {
-    return requestServices.patch(url, body);
+  updateServices(body) {
+    return requestServices.patch("/services", body);
   }
-  deleteServices(url) {
-    return requestServices.delete(url);
+  deleteServices(id) {
+    return requestServices.delete(`/services/${id}`);
   }
 }
 

@@ -2,23 +2,23 @@ import "./AllServices.css";
 import React, { useEffect, useState } from "react";
 import SingleService from "../SingleService/SingleService";
 import RepairServices from "../../../../Services/RepairServices";
-// import requestServices from "../../../../Services/httpServices";
+import useAsync from "../../../../hooks/useAsync";
 
 const AllServices = (props) => {
-  const { name } = props;
-  const [services, setServices] = useState([]);
-  console.log(name);
+  const { data, isLoading, isSuccess, isError, error } = useAsync(
+    RepairServices.getServices
+  );
 
-  useEffect(() => {
-    RepairServices.getServices("/services").then((data) => {
-      setServices(data);
-    });
-  }, []);
   return (
     <div className="ms-5 service-section">
-      {services.map((service) => (
-        <SingleService key={service._id} serviceInfo={service}></SingleService>
-      ))}
+      {isLoading && <h3 className="">Loading...</h3>}
+      {isSuccess &&
+        data.map((service) => (
+          <SingleService
+            key={service._id}
+            serviceInfo={service}
+          ></SingleService>
+        ))}
     </div>
   );
 };

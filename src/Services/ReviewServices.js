@@ -1,17 +1,17 @@
 import requestServices from "./httpServices";
 
 class ReviewServices {
-  getReviews(url) {
-    return requestServices.get(url);
+  getReviews() {
+    return requestServices.get("/reviews");
   }
-  postReview(url, body) {
-    return requestServices.post(url, body);
+  postReview(body) {
+    return requestServices.post("/reviews", body);
   }
-  updateReview(url, body) {
-    return requestServices.patch(url, body);
+  updateReview(body) {
+    return requestServices.patch("/reviews", body);
   }
-  deleteReview(url) {
-    return requestServices.delete(url);
+  deleteReview(id) {
+    return requestServices.delete(`/reviews/${id}`);
   }
 }
 
