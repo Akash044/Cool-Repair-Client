@@ -1,7 +1,8 @@
 import "./AllServices.css";
 import React, { useEffect, useState } from "react";
 import SingleService from "../SingleService/SingleService";
-import requestServices from "../../../../Services/httpServices";
+import RepairServices from "../../../../Services/RepairServices";
+// import requestServices from "../../../../Services/httpServices";
 
 const AllServices = (props) => {
   const { name } = props;
@@ -9,7 +10,7 @@ const AllServices = (props) => {
   console.log(name);
 
   useEffect(() => {
-    requestServices.get("/services").then((data) => {
+    RepairServices.getServices("/services").then((data) => {
       setServices(data);
     });
   }, []);

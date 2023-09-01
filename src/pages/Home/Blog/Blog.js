@@ -5,8 +5,8 @@ import React from "react";
 const Blog = () => {
   return (
     <div className="container blog-section">
-      {blogData.map((data) => (
-        <div>
+      {blogData.map((data, i) => (
+        <div key={i}>
           <div class="card" style={{ width: "18rem" }}>
             <div class="card-body">
               <h5 class="card-title">{data.title}</h5>

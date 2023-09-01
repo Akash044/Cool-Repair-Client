@@ -1,13 +1,13 @@
 import "./AllReviews.css";
 import React, { useEffect, useState } from "react";
 import SingleReview from "../SingleReview/SingleReview";
-import requestServices, { getReviews } from "../../../../Services/httpServices";
-import reviewServices from "../../../../Services/reviewService";
+import ReviewServices from "../../../../Services/ReviewServices";
 
 const AllReviews = () => {
   const [reviews, setReviews] = useState([]);
+
   useEffect(() => {
-    requestServices.get("/reviews").then((data) => {
+    ReviewServices.getReviews("/reviews").then((data) => {
       setReviews(data);
     });
   }, []);
