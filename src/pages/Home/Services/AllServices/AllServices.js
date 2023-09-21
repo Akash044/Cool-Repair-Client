@@ -9,7 +9,7 @@ const AllServices = (props) => {
 
   return (
     <div className="ms-5 service-section">
-      {isLoading && <h3 className="">Loading...</h3>}
+      {isLoading && <h3 className="">Loading......</h3>}
       {isSuccess &&
         data.map((service) => (
           <SingleService

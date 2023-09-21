@@ -1,7 +1,11 @@
-li:hover{
-    background-color: #b3aec7;
-    border-radius: 10px;
+li:hover {
+  background-color: #b3aec7;
+  border-radius: 10px;
 }
-.nav-bg{
-    background-color: salmon;
+.nav-bg {
+  background-color: salmon;
+}
+.nv {
+  border-radius: 30px 30px 30px 30px;
+  margin-top: 10px;
 }

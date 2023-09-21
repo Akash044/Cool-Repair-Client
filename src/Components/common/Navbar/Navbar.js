@@ -35,7 +35,7 @@ const Navbar = () => {
       <div className="container-fluid">
         <img
           src={logo}
-          style={{ width: "4rem", borderRadius: "30px" }}
+          style={{ width: "4rem", height: "4rem", borderRadius: "30px" }}
           alt=""
         />
         <Link className="navbar-brand ms-2" to="/">

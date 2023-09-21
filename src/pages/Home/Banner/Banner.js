@@ -5,13 +5,13 @@ import img from "../../../assets/images/03.jpg";
 const Banner = () => {
   return (
     <div className="w-100 justify-center">
-      <div className="d-flex justify-content-around align-self-stretch banner-section border-none">
-        <div className="col banner-img-div">
+      <div className="d-flex justify-content-between banner-section border-none">
+        <div className="col banner-img-div align-self-stretch">
           <img
             src={img}
             height={350}
-            width={600}
-            className="card-img banner-img"
+            width={650}
+            className=" banner-img"
             alt="..."
           />
         </div>
