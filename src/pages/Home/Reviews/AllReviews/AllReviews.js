@@ -1,13 +1,11 @@
 import "./AllReviews.css";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import SingleReview from "../SingleReview/SingleReview";
 import ReviewServices from "../../../../Services/ReviewServices";
 import useAsync from "../../../../hooks/useAsync";
 
 const AllReviews = () => {
-  const { data, isLoading, isSuccess, isError, error } = useAsync(
-    ReviewServices.getReviews
-  );
+  const { data, isLoading, isSuccess } = useAsync(ReviewServices.getReviews);
 
   return (
     <div className="reviews-section">

@@ -32,6 +32,10 @@
 .testimonial {
   background: #fff;
   padding: 30px;
+  min-width: 300px;
+  min-height: 400px;
+
+  position: relative;
 }
 .testimonial img {
   width: 100px;
@@ -46,4 +50,27 @@
 .stars {
   color: #6ab04c;
   margin-bottom: 20px;
+}
+.review-card {
+  position: relative;
+}
+.review-p {
+  max-height: 100px;
+  overflow-y: hidden;
+}
+.time-p {
+  position: absolute;
+  bottom: 1px;
+}
+.see-more-btn {
+  cursor: pointer;
+}
+.see-more-div {
+  z-index: 100;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  top: 200px;
+  /* color: white; */
+  right: -300px;
+  left: 300px;
 }

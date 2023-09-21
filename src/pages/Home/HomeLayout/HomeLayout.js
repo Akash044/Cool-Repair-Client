@@ -14,32 +14,32 @@ const Home = () => {
       <div className="container">
         <Banner></Banner>
       </div>
-      <div className="mt-4">
-        <div className="service-header">
+      <div className=" contents">
+        <div className="service-header mb-4 mx-auto">
           <h3>The Services we are provided</h3>
         </div>
         <div className="container">
           <AllServices name="khaled"></AllServices>
         </div>
       </div>
-      <div className="mt-5">
-        <div className="review-header mb-2">
-          <h3>Reviews</h3>
+      <div className=" contents">
+        <div className="review-header mb-4 mx-auto">
+          <h3 className="mx-auto">Reviews</h3>
         </div>
         <div className="container">
           <AllReviews></AllReviews>
         </div>
       </div>
-      <div className="mt-5">
-        <div className="blog-header mb-3">
+      <div className="contents">
+        <div className="blog-header mb-4 mx-auto">
           <h3>Blogs</h3>
         </div>
         <div className="container">
           <Blog></Blog>
         </div>
       </div>
-      <div className="mt-4">
-        <div className="ask-question-header mb-2">
+      <div className="contents">
+        <div className="ask-question-header mb-4 mx-auto">
           <h3>Ask your questions</h3>
         </div>
         <div className="container">

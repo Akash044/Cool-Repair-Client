@@ -7,13 +7,16 @@ const Blog = () => {
     <div className="container blog-section">
       {blogData.map((data, i) => (
         <div key={i}>
-          <div class="card" style={{ width: "18rem" }}>
-            <div class="card-body">
-              <h5 class="card-title">{data.title}</h5>
-              <h6 class="card-subtitle mb-2 text-muted">{data.subtitle}</h6>
-              <p class="card-text">{data.content}</p>
+          <div
+            className="card blog-card outline-none shadow"
+            style={{ width: "18rem" }}
+          >
+            <div className="card-body">
+              <h5 className="card-title">{data.title}</h5>
+              <h6 className="card-subtitle mb-2 text-muted">{data.subtitle}</h6>
+              <p className="card-text">{data.content}</p>
 
-              <a href="#" class="card-link">
+              <a href="#" className="card-link">
                 go details
               </a>
             </div>

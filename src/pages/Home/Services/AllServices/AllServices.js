@@ -1,13 +1,11 @@
 import "./AllServices.css";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import SingleService from "../SingleService/SingleService";
 import RepairServices from "../../../../Services/RepairServices";
 import useAsync from "../../../../hooks/useAsync";
 
 const AllServices = (props) => {
-  const { data, isLoading, isSuccess, isError, error } = useAsync(
-    RepairServices.getServices
-  );
+  const { data, isLoading, isSuccess } = useAsync(RepairServices.getServices);
 
   return (
     <div className="ms-5 service-section">

@@ -1,5 +1,6 @@
 import "./AskQuestion.css";
 import React from "react";
+import { FAQ_DATA } from "./faq_data";
 
 const AskQuestion = () => {
   return (
@@ -28,30 +29,20 @@ const AskQuestion = () => {
         </div>
         <button className="btn btn-success">Submit</button>
       </div>
-      <div className="col-md-7">
-          <h4>FAQ</h4>
+      <div className="col-md-7 FAQ-Q-A-section">
+        <h4>FAQ</h4>
         <ol className="list-group list-group-numbered">
-          <li className="list-group-item d-flex justify-content-between align-items-start">
-            <div className="ms-2 me-auto">
-              <div className="fw-bold">Question-01</div>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            </div>
-            <span className="badge bg-primary rounded-pill">14</span>
-          </li>
-          <li className="list-group-item d-flex justify-content-between align-items-start">
-            <div className="ms-2 me-auto">
-              <div className="fw-bold">Question-02</div>
-             Earum nostrum quod soluta architecto aliquam ipsa corrupti adipisci, 
-            </div>
-            <span className="badge bg-primary rounded-pill">14</span>
-          </li>
-          <li className="list-group-item d-flex justify-content-between align-items-start">
-            <div className="ms-2 me-auto">
-              <div className="fw-bold">Question-03</div>
-              laudantium esse voluptate ab quibusdam non vitae?
-            </div>
-            <span className="badge bg-primary rounded-pill">14</span>
-          </li>
+          {FAQ_DATA.map((faq, i) => (
+            <li className="list-group-item d-flex justify-content-between align-items-start">
+              <div className="ms-2 me-auto">
+                <div className="fw-bold">{faq.Question}</div>
+                {faq.Answer}
+              </div>
+              <span className="badge bg-primary rounded-pill">
+                {Math.round(Math.random() * 10)}
+              </span>
+            </li>
+          ))}
         </ol>
       </div>
     </div>
