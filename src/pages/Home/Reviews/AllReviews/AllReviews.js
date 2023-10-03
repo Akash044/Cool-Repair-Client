@@ -8,7 +8,7 @@ const AllReviews = () => {
   const { data, isLoading, isSuccess } = useAsync(ReviewServices.getReviews);
 
   return (
-    <div className="reviews-section">
+    <div className="reviews-section p-4">
       {isLoading && <h3 className="mx-auto">Loading......</h3>}
       {isSuccess &&
         data.map((review) => (

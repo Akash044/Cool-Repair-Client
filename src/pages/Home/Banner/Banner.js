@@ -5,20 +5,16 @@ import img from "../../../assets/images/03.jpg";
 const Banner = () => {
   return (
     <div className="w-100 justify-center">
-      <div className="d-flex justify-content-between banner-section border-none">
-        <div className="col banner-img-div align-self-stretch">
-          <img
-            src={img}
-            height={350}
-            width={650}
-            className=" banner-img"
-            alt="..."
-          />
+      <div className="banner-section border-none">
+        <div className="banner-img-div">
+          <img src={img} className="card-img banner-img" alt="..." />
         </div>
 
-        <div className="col">
-          <h4 className="mt-4">Experience Cool Confidence with Our Repairs!</h4>
-          <p className="">
+        <div className="">
+          <h4 className="mt-4 p-4">
+            Experience Cool Confidence with Our Repairs!
+          </h4>
+          <p className="p-4">
             Welcome to COOL REPAIR - Your Premier Destination for Top-notch
             Repair Services! When it comes to restoring comfort and peace of
             mind, we've got you covered. Our expert technicians are committed to
