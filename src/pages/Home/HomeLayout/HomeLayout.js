@@ -15,32 +15,42 @@ const Home = () => {
         <Banner></Banner>
       </div>
       <div className=" contents">
-        <div className="service-header mb-4 mx-auto">
-          <h4>The Service we are provided</h4>
+        <div className="review-header mb-4 mx-auto d-flex justify-content-center align-items-center">
+          <hr className="border border-danger border-2 line-width" />
+          <div className="fs-3 fw-bold text-uppercase">
+            The Services we are provided
+          </div>
+          <hr className="border border-danger border-2 line-width" />
         </div>
         <div className="container">
-          <AllServices name="khaled"></AllServices>
+          <AllServices></AllServices>
         </div>
       </div>
-      <div className=" contents">
-        <div className="review-header mb-4 mx-auto">
-          <h4 className="mx-auto">Reviews</h4>
+      <div className="contents">
+        <div className="review-header mb-4 d-flex justify-content-center align-items-center">
+          <hr className="border border-danger border-2 line-width" />
+          <div className="fs-3 fw-bold text-uppercase">Reviews</div>
+          <hr className="border border-danger border-2 line-width" />
         </div>
         <div className="container">
           <AllReviews></AllReviews>
         </div>
       </div>
       <div className="contents">
-        <div className="blog-header mb-4 mx-auto">
-          <h4>Blogs</h4>
+        <div className="review-header mb-4 mx-auto d-flex justify-content-center align-items-center">
+          <hr className="border border-danger border-2 line-width" />
+          <div className="fs-3 fw-bold text-uppercase">Blogs</div>
+          <hr className="border border-danger border-2 line-width" />
         </div>
         <div className="container">
           <Blog></Blog>
         </div>
       </div>
       <div className="contents">
-        <div className="ask-question-header mb-4 mx-auto">
-          <h4>Ask your questions</h4>
+        <div className="review-header mb-4 mx-auto d-flex justify-content-center align-items-center">
+          <hr className="border border-danger border-2 line-width" />
+          <div className="fs-3 fw-bold text-uppercase">Ask us Anything</div>
+          <hr className="border border-danger border-2 line-width" />
         </div>
         <div className="container">
           <AskQuestion></AskQuestion>

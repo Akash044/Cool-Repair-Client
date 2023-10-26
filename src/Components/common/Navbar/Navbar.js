@@ -31,15 +31,15 @@ const Navbar = () => {
   };
   console.log(loggedUser);
   return (
-    <nav className="navbar navbar-expand-lg bg-gradient navbar-light nav-bg nv">
-      <div className="container-fluid">
+    <nav className="container navbar navbar-expand-lg bg-gradient navbar-light nav-bg nv">
+      <div className="container-fluid pt-2">
         <img
           src={logo}
-          style={{ width: "4rem", height: "4rem", borderRadius: "30px" }}
+          style={{ width: "3rem", height: "3rem", borderRadius: "30px" }}
           alt=""
         />
         <Link className="navbar-brand ms-2" to="/">
-          <h3>COOL REPAIR</h3>
+          <h4 className="fw-bold fs-4">COOL REPAIR</h4>
         </Link>
         <button
           className="navbar-toggler"

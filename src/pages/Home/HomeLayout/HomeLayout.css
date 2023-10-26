@@ -1,34 +1,37 @@
 .service-header {
-  background-color: salmon;
+  /* background-color: salmon;
   padding: 1px;
   width: 30%;
   border-radius: 30px 30px 30px 30px;
-  text-align: center;
+  text-align: center; */
 }
 .review-header {
-  background-color: steelblue;
-  padding: 1px;
-  width: 30%;
-  border-radius: 30px 30px 30px 30px;
-  text-align: center;
+  /* background-color: steelblue; */
+  /* padding: 1px; */
+  /* width: 30%; */
+  /* border-radius: 30px 30px 30px 30px; */
+  /* text-align: center; */
 }
 
 .ask-question-header {
-  background-color: rgb(167, 64, 145);
+  /* background-color: rgb(167, 64, 145);
   padding: 1px;
   width: 30%;
   border-radius: 30px 30px 30px 30px;
-  text-align: center;
+  text-align: center; */
 }
 .blog-header {
-  background-color: rgb(39, 182, 108);
+  /* background-color: rgb(39, 182, 108);
   padding: 1px;
   width: 30%;
   border-radius: 30px 30px 30px 30px;
-  text-align: center;
+  text-align: center; */
 }
 
 .contents {
   margin-bottom: 100px;
   margin-top: 50px;
+}
+.line-width {
+  width: 30% !important;
 }

@@ -11,10 +11,10 @@ const Banner = () => {
         </div>
 
         <div className="">
-          <h4 className="mt-4 p-4">
+          <h4 className="mt-4 p-4  fs-4 fw-bold text-uppercase">
             Experience Cool Confidence with Our Repairs!
           </h4>
-          <p className="p-4">
+          <p className="p-4 ">
             Welcome to COOL REPAIR - Your Premier Destination for Top-notch
             Repair Services! When it comes to restoring comfort and peace of
             mind, we've got you covered. Our expert technicians are committed to
